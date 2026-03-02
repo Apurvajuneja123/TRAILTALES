@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrailTales - Testimonials</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/testimonials.css">
+</head>
+<body>
+    <header class="navbar">
+    <div class="logo">TrailTales</div>
+    <nav>
+        <a href="/api/home">Home</a>
+        <a href="/api/about">About</a>
+        <a href="/api/destinations">Destinations</a>
+        <a href="/api/gallery">Gallery</a>
+        <a href="/api/testimonials">Testimonials</a>
+        <a href="/api/contact">Contact</a>
+        <a href="/api/logout">Logout</a>
+    </nav>
+</header>
+
+
+    <div class="testimonials-section" id="testimonials">
+        <div class="testimonials-header">
+            <h2>What Our Travelers Say</h2>
+        </div>
+        <div class="container">
+            <div class="row">
+                <% testimonials.forEach(t => { %>
+                <div class="col-md-4">
+                    <div class="testimonial-item">
+                        <img src="<%= t.image %>" alt="User image">
+                        <p>"<%= t.message %>"</p>
+                        <h4><%= t.name %></h4>
+                    </div>
+                </div>
+                <% }) %>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 TrailTales. All rights reserved. | <a href="#">Privacy Policy</a></p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
